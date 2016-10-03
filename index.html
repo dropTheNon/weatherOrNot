@@ -17,10 +17,16 @@
   <!-- Linking our app.js file -->
   <script src="app.js"></script>
 </head>
-<body>
+<body ng-controller="MainCtrl">
   <div class="container">
-    {{ 1+1 }}
-    <button class="btn btn-success">Test</button>
+    <h1>Weather Or Not</h1>
+    <p>Enter a ZIP code to see your weather forecast</p>
+    <form class="form" ng-submit="getForecast()">
+      <div class="form-group">
+        <input ng-model="zipCodeInput" id="zipCode" class="form-control" placeholder="12345"> 
+        <button ng-click="" class="btn btn-success">Get Your Forecast</button>
+      </div>
+    </form>
   </div>
 
   <!-- The code stops here, McBroom -->
