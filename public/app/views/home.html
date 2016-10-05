@@ -1,43 +1,69 @@
-<div ng-hide="results">  
-  <p>Enter a ZIP code to see your weather forecast</p>
+<div ng-hide="results" id="homeScreenBox">
+  <h1 class="centered">Weather or Not</h1>  
+  <p class="centered">Enter a ZIP code to see your weather forecast</p>
+  <br/>
+  <form class="form" ng-submit="getForecast()">
+    <div class="form-group" id="zipBox">
+      <input ng-model="zipCodeInput" id="zipCodeField" class="form-control" placeholder="12345">
+      <br/>
+      <button ng-click="" class="btn btn-success">Get Your Forecast</button>
+    </div>
+  </form>
 </div>
-<div ng-show="results">
+<div ng-show="results" id="fiveDayBox">
   <div id="currentConditions">
-    <h3>Current Conditions for {{zipCodeInput}}</h3>
+    <h4>Current Conditions for {{zipCodeInput}}</h4>
     <p><strong>Summary: </strong>{{results.data.currently.summary}}</p>
     <p><strong>Currently: </strong>{{results.data.currently.temperature}} (degrees F)</p>
   </div>
+  <hr/>
   <div id="fiveDayForecast">
-    <h3>What to expect over the next few days</h3>
-    <div class="well">
-      <p><strong>Summary: </strong>{{results.data.daily.data[1].summary}}</p>
-      <p><strong>High of: </strong>{{results.data.daily.data[1].temperatureMax}}</p>
-      <p><strong>Low of: </strong>{{results.data.daily.data[1].temperatureMin}}</p>
+    <h4>What to expect over the next five days</h4>
+    <div class="row">
+      <h5>Tomorrow</h5>
+      <div id="firstBox" class="col-lg-2 col-md-2 daily">
+        <p><strong>Summary:</strong></p>
+        <p>{{results.data.daily.data[1].summary}}</p>
+        <p class="high">High of: <strong>{{results.data.daily.data[1].temperatureMax}}</strong></p>
+        <p class="low">Low of: <strong>{{results.data.daily.data[1].temperatureMin}}</strong></p>
+      </div>
+      <div class="col-lg-2 col-md-2 daily">
+        <p><strong>Summary:</strong></p>
+        <p>{{results.data.daily.data[2].summary}}</p>
+        <p class="high">High of: <strong>{{results.data.daily.data[2].temperatureMax}}</strong></p>
+        <p class="low">Low of: <strong>{{results.data.daily.data[2].temperatureMin}}</strong></p>
+      </div>
+      <div class="col-lg-2 col-md-2 daily">
+        <p><strong>Summary:</strong></p>
+        <p>{{results.data.daily.data[3].summary}}</p>
+        <p class="high">High of: <strong>{{results.data.daily.data[3].temperatureMax}}</strong></p>
+        <p class="low">Low of: <strong>{{results.data.daily.data[3].temperatureMin}}</strong></p>
+      </div>
+      <div class="col-lg-2 col-md-2 daily">
+        <p><strong>Summary:</strong></p>
+        <p>{{results.data.daily.data[4].summary}}</p>
+        <p class="high">High of: <strong>{{results.data.daily.data[4].temperatureMax}}</strong></p>
+        <p class="low">Low of: <strong>{{results.data.daily.data[4].temperatureMin}}</strong></p>
+      </div>
+      <div class="col-lg-2 col-md-2 daily">
+        <p><strong>Summary:</strong></p>
+        <p>{{results.data.daily.data[5].summary}}</p>
+        <p class="high">High of: <strong>{{results.data.daily.data[5].temperatureMax}}</strong></p>
+        <p class="low">Low of: <strong>{{results.data.daily.data[5].temperatureMin}}</strong></p>
+      </div>
     </div>
-    <div class="well">
-      
+    <hr/>
+  </div><!-- Close Five Day Forecast div -->
+  <form class="form" id="inputBox" ng-submit="getForecast()">
+    <div class="form-group">
+      <input ng-model="zipCodeInput" id="zipCodeField" class="form-control" placeholder="12345">
+      <button ng-click="" class="btn btn-success">Get Your Forecast</button>
     </div>
-    <div class="well">
-      
-    </div>
-    <div class="well">
-      
-    </div>
-    <div class="well">
-      
-    </div>
-    <div class="well">
-      
-    </div>
-    <div class="well">
-      
-    </div>
+  </form>
+</div><!-- Close ng-show div -->
+<div class="floor-ctn">
+  <div class="floor">
+    <p>Weather data powered by <a href="https://darksky.net/poweredby/">DarkSky.net</a></p>
+    <p>Built by <a href="http://joshmcbroom.com">Josh McBroom</a></p>
   </div>
 </div>
-<form class="form" ng-submit="getForecast()">
-  <div class="form-group">
-    <input ng-model="zipCodeInput" id="zipCodeField" class="form-control" placeholder="12345">
-    <br/>
-    <button ng-click="" class="btn btn-success">Get Your Forecast</button>
-  </div>
-</form>

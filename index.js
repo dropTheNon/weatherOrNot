@@ -15,7 +15,6 @@ app.use('/api', require('./controllers/forecast'));
 
 // Using a wildcard to catch all other routes
 app.get('/*', function(req, res) {
-  console.log('catchall')
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 

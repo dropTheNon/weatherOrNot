@@ -1,3 +1,88 @@
+/*Adjusting the length of the zipcode input box*/
 #zipCodeField {
   width: 140px;
+}
+
+/*Setting our background image*/
+/*Background images courtesy of Unsplash.com*/
+body {
+  background-image: url('../img/wON-rain-on-water.jpeg');
+  background-size: cover;
+}
+
+/*Styling the Five Day Forecast*/
+.daily {
+  border: 1px solid black;
+  margin: 5px 5px 0 5px;
+  padding-left: 10px;
+  margin-left: 15px;
+}
+#firstBox.col-lg-2.col-md-2.daily {
+  margin-left: 40px;
+}
+.high {
+  color: red;
+}
+.low{
+  color: blue;
+}
+
+/*Trying to overcome Bootstraps primacy to reposition my columns*/
+#fiveDayForecast div.daily {
+  padding: 0 5px 0 5px;
+  margin: 0 5px 0 5px;
+}
+
+/*Centering text*/
+.centered {
+  text-align: center;
+}
+
+/*Styling the info boxes, positioning them, and making them opaque*/
+#homeScreenBox {
+  padding-top: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  height: 340px;
+  width: 340px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -170px;
+  margin-left: -170px;
+}
+#fiveDayBox {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  height: 500px;
+  width: 750px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -275px;
+  margin-left: -375px;
+  padding: 10px;
+}
+
+/*Centering the boxes for inputing zip codes*/
+#zipBox {
+  margin-left: 30%;
+}
+#inputBox {
+  margin: 0 40% 0 40%;
+}
+
+/*Roughly positioning "Tomorrow"*/
+h5 {
+  margin-left: 40px;
+}
+
+/*Centering the footer paragraphs with attributions*/
+.floor-ctn {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+}
+.floor > p {
+  margin-left: 30%;
 }
