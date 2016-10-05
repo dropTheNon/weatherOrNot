@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/dropTheNon/weatherOrNot#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "is-valid-zip": "0.0.3",
+    "path": "^0.12.7",
+    "request": "^2.75.0",
     "zipcodes": "^2.1.0"
   }
 }

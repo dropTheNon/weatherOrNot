@@ -1,0 +1,43 @@
+<div ng-hide="results">  
+  <p>Enter a ZIP code to see your weather forecast</p>
+</div>
+<div ng-show="results">
+  <div id="currentConditions">
+    <h3>Current Conditions for {{zipCodeInput}}</h3>
+    <p><strong>Summary: </strong>{{results.data.currently.summary}}</p>
+    <p><strong>Currently: </strong>{{results.data.currently.temperature}} (degrees F)</p>
+  </div>
+  <div id="fiveDayForecast">
+    <h3>What to expect over the next few days</h3>
+    <div class="well">
+      <p><strong>Summary: </strong>{{results.data.daily.data[1].summary}}</p>
+      <p><strong>High of: </strong>{{results.data.daily.data[1].temperatureMax}}</p>
+      <p><strong>Low of: </strong>{{results.data.daily.data[1].temperatureMin}}</p>
+    </div>
+    <div class="well">
+      
+    </div>
+    <div class="well">
+      
+    </div>
+    <div class="well">
+      
+    </div>
+    <div class="well">
+      
+    </div>
+    <div class="well">
+      
+    </div>
+    <div class="well">
+      
+    </div>
+  </div>
+</div>
+<form class="form" ng-submit="getForecast()">
+  <div class="form-group">
+    <input ng-model="zipCodeInput" id="zipCodeField" class="form-control" placeholder="12345">
+    <br/>
+    <button ng-click="" class="btn btn-success">Get Your Forecast</button>
+  </div>
+</form>
