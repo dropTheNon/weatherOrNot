@@ -3,6 +3,8 @@
 ## Description
 Weather Or Not is a simple app that lets you input a zip code and receive the current conditions & five-day forecast for that zip code.
 
+![alt text](https://github.com/dropTheNon/weatherOrNot/raw/master/public/img/wON-screen-shot.png)
+
 Weather Or Not is deployed live at: [http://weatherornot13.herokuapp.com](http://weatherornot13.herokuapp.com)
 
 ## Technologies Used:
