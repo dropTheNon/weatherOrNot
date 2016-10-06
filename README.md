@@ -19,7 +19,8 @@ Weather Or Not is deployed live at: [http://weatherornot13.herokuapp.com](http:/
  * Data powered by [http://darksky.net/poweredby/](http://darksky.net/poweredby)
  * Photos courtesy of [http://unsplash.com](http://unsplash.com)
  
-## Next Steps
+## Next Steps/To-Do List
  * Listing days/dates above Five Day Forecast
  * Listing location as "City, State" instead of re-using the zip code
  * Spend more time styling, tidying up
+ * Remove node_modules from GitHub/Git
